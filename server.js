@@ -25,12 +25,22 @@ createServer(async (req, res) => {
             res.write(logo)
 
         }else if(url.pathname == "/carte.html"){
-
             let carte = await readFile("./app/carte/carte.html")
             res.write(carte)
+        }else if(url.pathname == "/carte.css"){
+            let carte = await readFile("./app/carte/carte.css")
+            res.write(carte)
+        }else if(url.pathname == "/carte.js"){
+            let carte = await readFile("./app/carte/carte.js", "utf8")
+            res.write(carte)
+        }else if(url.pathname == "/images/eating_burger.jpg"){
+            let burger = await readFile("./images/eating_burger.jpg")
+            res.write(burger)
+        }else if(url.pathname == "/storage/menu.json"){
+            let file = await readFile("./storage/menu.json")
+            res.write(file)
 
         }else if(url.pathname == "/infos.html"){
-
             let infos = await readFile("./app/infos/infos.html")
             res.write(infos)
 

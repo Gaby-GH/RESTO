@@ -1,7 +1,7 @@
 {
-  "name": "resto",
+  "name": "carte",
   "version": "1.0.0",
-  "main": "script.js",
+  "main": "carte.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -9,9 +9,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "require": "^2.4.20",
-    "xhr2": "^0.2.1"
-  }
+  "description": ""
 }

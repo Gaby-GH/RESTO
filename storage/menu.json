@@ -1,0 +1,13 @@
+[
+    {
+        "name": "Classique Smash",
+        "ingredients": "Pain brioché, sauce special, cornichons, oignons, oignons frits, salade, cheddar, boeuf, bacon",
+        "prix": "12$"
+    },
+
+    {
+        "name": "Smash Chiken",
+        "ingredients": "Pain brioché, sauce special, cornichons, oignons, oignons frits, salade, cheddar, chiken frit, bacon",
+        "prix": "14$"
+    }
+]

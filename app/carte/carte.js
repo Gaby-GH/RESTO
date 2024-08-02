@@ -1,17 +1,17 @@
-import {readFile} from "node:fs/promises"
+// VOIR QUELLE REQUETE MEILLEUR : fetch() , xmlhttp() ?
 
-console.log("ca marche pas")
+async function afficherMenu() {
+    const reponse = await fetch("http://localhost:3008/storage/menu.json")
+    const menu = await reponse.json()
+    console.log(menu)
+    
 
+    let carte = document.querySelector("#div_carte_burger")
+    let template = document.querySelector("#temp_plats")
 
-let path = "../../storage/menu.json"
-
-let menu = await readFile(path, "utf8")
-menu =  JSON.parse(menu)
-
-let carte_burger = document.querySelector("#div_carte_burger")
-
-for (let i of menu){
-    let element = document.createElement("p")
-    element.textContent = i
-    carte_burger.append(element)
+    for (let i of menu){
+        // AFFICHER LE MENU
+    }
 }
+
+afficherMenu()

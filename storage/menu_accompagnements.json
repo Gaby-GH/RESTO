@@ -1,0 +1,31 @@
+[
+    {
+        "name": "Petite frites",
+        "prix": "3$"
+    },
+
+    {
+        "name": "Grande frites",
+        "prix": "5$"
+    },
+
+    {
+        "name": "Barquette poulet frit",
+        "prix": "6$"
+    },
+
+    {
+        "name": "Salade avec carottes rapées",
+        "prix": "2$"
+    },
+
+    {
+        "name": "2 Gros cornichons",
+        "prix": "1$"
+    },
+
+    {
+        "name": "2 Piments rouges",
+        "prix": "1$"
+    }
+]

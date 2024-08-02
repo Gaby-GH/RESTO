@@ -85,7 +85,7 @@ body{
     align-items: center;
     justify-content: space-between;
     width: 60vw;
-    margin-bottom: 16px;
+    margin-bottom: 26px;
 }
 
 .title_plat{
@@ -96,6 +96,7 @@ body{
 
 .ingredients_plat{
     margin: 0%;
+    width: 52vw;
 }
 
 .prix_burger{

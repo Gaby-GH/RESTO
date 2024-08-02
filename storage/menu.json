@@ -9,5 +9,47 @@
         "name": "Smash Chiken",
         "ingredients": "Pain brioché, sauce special, cornichons, oignons, oignons frits, salade, cheddar, chiken frit, bacon",
         "prix": "14$"
+    },
+
+    {
+        "name": "Red Hot Chili Pepper",
+        "ingredients": "Pain brioché, sauce special, cornichons, oignons, oignons frits, salade, cheddar, chiken frit, piments rouges",
+        "prix": "12$"
+    },
+
+    {
+        "name": "Savoyard",
+        "ingredients": "Pain brioché, sauce special, cornichons, oignons, oignons frits, salade, reblochon, boeuf, bacon",
+        "prix": "14$"
+    },
+
+    {
+        "name": "San Francisco",
+        "ingredients": "Pain brioché, sauce special, cornichons, oignons, oignons frits, salade, cheddar, boeuf, bacon, oeuf au plat",
+        "prix": "15$"
+    },
+
+    {
+        "name": "New York",
+        "ingredients": "Pain brioché, sauce special, cornichons, oignons, oignons frits, salade, cheddar, omelette, bacon",
+        "prix": "12$"
+    },
+
+    {
+        "name": "Fish & Smash",
+        "ingredients": "Pain brioché, sauce special, cornichons, oignons, salade, cheddar, poisson frit",
+        "prix": "14$"
+    },
+
+    {
+        "name": "Veggie Smash",
+        "ingredients": "Pain brioché, sauce special, cornichons, oignons, oignons frits, salade, galette de pomme de terre",
+        "prix": "14$"
+    },
+
+    {
+        "name": "Yosemite",
+        "ingredients": "Pain brioché, sauce special, cornichons, oignons, oignons frits, salade, galette de pomme de terre, tomates, avocat",
+        "prix": "16$"
     }
 ]

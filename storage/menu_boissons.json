@@ -1,0 +1,46 @@
+[
+    {
+        "name": "Eau 50cl",
+        "prix": "1$"
+    }, 
+
+    {
+        "name": "Coca 33cl",
+        "prix": "2$"
+    }, 
+
+    {
+        "name": "Fanta 33cl",
+        "prix": "2$"
+    }, 
+
+    {
+        "name": "schweppes agrumes 33cl",
+        "prix": "2$"
+    }, 
+
+    {
+        "name": "Oasis 33cl",
+        "prix": "2$"
+    }, 
+
+    {
+        "name": "Sprite 33cl",
+        "prix": "2$"
+    }, 
+
+    {
+        "name": "Perrier 33cl",
+        "prix": "2$"
+    }, 
+
+    {
+        "name": "Jus de fruits 33cl",
+        "prix": "2$"
+    }, 
+
+    {
+        "name": "Diabolo grenadine 33cl",
+        "prix": "2$"
+    }
+]

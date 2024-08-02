@@ -39,7 +39,13 @@ createServer(async (req, res) => {
         }else if(url.pathname == "/storage/menu.json"){
             let file = await readFile("./storage/menu.json")
             res.write(file)
-
+        }else if(url.pathname == "/storage/menu_accompagnements.json"){
+            let file = await readFile("./storage/menu_accompagnements.json")
+            res.write(file)
+        }else if(url.pathname == "/storage/menu_boissons.json"){
+            let file = await readFile("./storage/menu_boissons.json")
+            res.write(file)
+    
         }else if(url.pathname == "/infos.html"){
             let infos = await readFile("./app/infos/infos.html")
             res.write(infos)

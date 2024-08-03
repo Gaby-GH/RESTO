@@ -49,6 +49,15 @@ createServer(async (req, res) => {
         }else if(url.pathname == "/infos.html"){
             let infos = await readFile("./app/infos/infos.html")
             res.write(infos)
+        }else if (url.pathname == "/infos.css"){
+            let file = await readFile("./app/infos/infos.css")
+            res.write(file)
+        }else if (url.pathname == "/infos.js"){
+            let file = await readFile("./app/infos/infos.js")
+            res.write(file)
+        }else if (url.pathname == "/images/info_back.jpg"){
+            let file = await readFile("./images/info_back.jpg")
+            res.write(file)
 
         } else{
             console.log("not found")

@@ -3,10 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <link rel="stylesheet" href="infos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <script src="infos.js" defer></script>
+
+    <link rel="icon" href="logo.avif">
+
+    <title>Infos</title>
 </head>
 <body>
-    <p>infos</p>
+    <div id="nav_barre">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        <a href="/" class="p_nav_barre" id="menu" style="margin-left: 4px;">Menu</a>
+        <a href="carte.html" class="p_nav_barre" id="carte">Notre carte</a>
+        <a href="infos.html" class="p_nav_barre" id="infos" style="color: black;">Infos</a>
+    </div>
+
+    <div id="div_main">
+        <div class="div_around">
+            <div class="div_infos" id="div_horaire">
+                <p id="p_quand">Quand venir deguster nos smashs burger ?</p>
+                <div id="horaires"></div>
+                <p id="p_reserver">Reserver : 06 00 00 00 00</p>
+            </div>
+        </div>
+
+        <div class="div_around">
+            <div id="div_map" class="div_infos">
+                <p>Où venir deguster nos smashs burger ?</p>
+                <a href="https://maps.app.goo.gl/KxkcPQe4MrmpKX74A">Rte de la Corniche, 76240 Bonsecours</a>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12977.923129492117!2d1.112420692417735!3d49.43488590891475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e0de85b4d58017%3A0x627c0f874cdeda48!2sPanorama%20de%20Rouen%20de%20la%20C%C3%B4te%20Sainte-Catherine!5e0!3m2!1sfr!2sfr!4v1722704790710!5m2!1sfr!2sfr" width="70%" height="53.5%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
 
 
 </body>

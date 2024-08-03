@@ -1,5 +1,8 @@
 // Gestion des menus
 
+let carte_1 = document.querySelector("#carte_1")
+carte_1.style.height = "120vw"
+
 async function afficherMenu() {
     const reponse = await fetch("http://localhost:3008/storage/menu.json")
     const menu = await reponse.json()
@@ -15,6 +18,8 @@ async function afficherMenu() {
         clone.querySelector(".prix_burger").textContent = i.prix
         carte_burger.append(clone)
     }
+
+    carte_1.style.height = "auto"
 }
 
 async function afficherMenuAccompagnements(){
@@ -65,13 +70,11 @@ afficherMenuBoissons()
 
 let observer = null
 let ratio = 0.1
-let number = 0
 
 function ElementAnimation(entries, observer){
-    number += 1
-    
+        
     entries.forEach(function (entry){
-        if (entry.intersectionRatio > 0 && number > 2){
+        if (entry.intersectionRatio > 0){
             console.log(entry.target)
             entry.target.classList.add("animation")            
         }
@@ -79,11 +82,7 @@ function ElementAnimation(entries, observer){
 }
 
 function Observe(elements){
-    let y = Math.round(window.innerHeight * ratio)
-
-    observer = new IntersectionObserver(ElementAnimation, {
-        //rootMargin: `-${window.innerHeight - y - 1}px 0px -${y}px 0px`
-    })
+    observer = new IntersectionObserver(ElementAnimation, {})
     spies.forEach((elem) => {
         observer.observe(elem)
     })

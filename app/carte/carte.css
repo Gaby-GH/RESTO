@@ -46,14 +46,14 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 190px;
+    margin-top: 145px;
 }
 
 .div_around{
     padding: 16px;
     border: 2px solid rgba(218, 165, 32);
     width: 70vw;
-    margin-bottom: 85px;
+    margin-top: 45px;
     transition: all 0.8s;
     opacity: 0;
 }

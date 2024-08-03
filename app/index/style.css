@@ -48,7 +48,7 @@ body{
     justify-content: space-around;
     display: flex;
     flex-direction: row;
-    margin-top: 130px;
+    margin-top: 170px;
 
 }
 
@@ -56,6 +56,8 @@ body{
     padding: 12px;
     border: 2px solid goldenrod;
     border-radius: 4px;
+    opacity: 0;
+    transition: all 0.8s;
 }
 
 .div_menu{
@@ -65,10 +67,14 @@ body{
     border-radius: 4px;
 }
 
+.animation{
+    transform: translateY(-40px);
+    opacity: 1;
+}
+
 #p_slogan{
     font-size: 38px;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
 }
-

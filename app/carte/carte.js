@@ -60,18 +60,31 @@ afficherMenuBoissons()
 
 
 // Finir Scrollspy --->
+// Et regler problemes
+
 
 let observer = null
+let ratio = 0.1
+let number = 0
 
-function ElementAnimation(entries, obersver){
-    console.log(entries)
+function ElementAnimation(entries, observer){
+    number += 1
+    
+    entries.forEach(function (entry){
+        if (entry.intersectionRatio > 0 && number > 2){
+            console.log(entry.target)
+            entry.target.classList.add("animation")            
+        }
+    })
 }
 
 function Observe(elements){
+    let y = Math.round(window.innerHeight * ratio)
+
     observer = new IntersectionObserver(ElementAnimation, {
-        
+        //rootMargin: `-${window.innerHeight - y - 1}px 0px -${y}px 0px`
     })
-    elements.forEach((elem) => {
+    spies.forEach((elem) => {
         observer.observe(elem)
     })
 

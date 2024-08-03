@@ -18,6 +18,7 @@ body{
     align-items: center;
     justify-content: center;
     border-bottom: 2px solid goldenrod;
+    z-index: 3;
 }
 
 #nav_barre:hover{
@@ -45,14 +46,16 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 190px;
 }
 
 .div_around{
     padding: 16px;
-    border: 2px solid goldenrod;
+    border: 2px solid rgba(218, 165, 32);
     width: 70vw;
     margin-bottom: 85px;
+    transition: all 0.8s;
+    opacity: 0;
 }
 
 .div_carte{
@@ -103,4 +106,9 @@ body{
     font-weight: 400;
     font-size: 24px;
     margin: 0%;
+}
+
+.animation{
+    transform: translateY(-40px);
+    opacity: 1;
 }

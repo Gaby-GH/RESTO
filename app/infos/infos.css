@@ -40,7 +40,7 @@ body{
 }
 
 #div_main{
-    margin-top: 145px;
+    margin-top: 175px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -51,6 +51,8 @@ body{
     padding: 12px;
     border: 2px solid goldenrod;
     border-radius: 4px;
+    opacity: 0;
+    transition: all 0.8s;
 }
 
 .div_infos{
@@ -90,10 +92,34 @@ body{
     text-decoration: underline solid black;
 }
 
-#horaire{
+#horaires{
+    border-collapse: collapse;
+    border: 2px solid goldenrod;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 70%;
+     height: 53.5%;
+
     /*Finir ici style de horaire utiliser un tableau pour les horaires 
     et meme dimensions que la carte avec contour goldenrod
     + Photos des burgers */
+}
+
+tr, td{
+    text-align: center;
+}
+
+.td_title{
+    border-bottom: 2px solid goldenrod;
+}
+
+.jour{
+    border-right: 2px solid goldenrod;
+}
+
+.td_mild{
+    border-right: 2px solid goldenrod;
 }
 
 #div_map{
@@ -131,3 +157,7 @@ iframe{
     padding: 8px;
 }
 
+.animation{
+    opacity: 1;
+    transform: translateY(-40px);
+}

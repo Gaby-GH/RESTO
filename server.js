@@ -61,7 +61,17 @@ createServer(async (req, res) => {
         }else if(url.pathname == "/storage/horaires.json"){
             let file = await readFile("./storage/horaires.json")
             res.write(file)
-    
+
+        }else if(url.pathname == "/create.html"){
+            let file = await readFile("./app/create_account/create.html")
+            res.write(file)
+        }else if(url.pathname == "/create.css"){
+            let file = await readFile("./app/create_account/create.css")
+            res.write(file)
+        }else if(url.pathname == "/create.js"){
+            let file = await readFile("./app/create_account/create.js")
+            res.write(file)
+
         } else{
             console.log("not found")
             res.writeHead(404)

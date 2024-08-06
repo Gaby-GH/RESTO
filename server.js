@@ -73,6 +73,10 @@ createServer(async (req, res) => {
             let file = await readFile("./app/create_account/create.js")
             res.write(file)
 
+        }else if(url.pathname == "/connexion.html"){
+            let file = await readFile("./app/connexion/connexion.html")
+            res.write(file)
+
         } else{
             console.log("not found")
             res.writeHead(404)

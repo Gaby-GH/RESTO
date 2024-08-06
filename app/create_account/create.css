@@ -136,8 +136,31 @@ button:hover{
     transform: scale(1.01);
 }
 
+#div_return{
+    width: 80%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 #p_valide{
     font-family: "Arsenal SC", sans-serif;
     font-weight: 500;
     font-style: normal;
+    font-size: 28px;
+    text-align: center;
+}
+
+#btn_return{
+    width: 180px;
+    display: flex;
+    justify-content: center;
+}
+
+button > a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
 }

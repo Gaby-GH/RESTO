@@ -12,6 +12,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
     <script src="create.js" defer></script>
 
     <title>Creer un compte</title>
@@ -25,14 +29,38 @@
     <div id="div_main">
         <div id="div_around">
             <div id="div_create">
-                <label for="user">User name</label>
-                <input name="user" type="text">
+                <p id="p_title">Creer un compte</p>
 
-                <label for="password">Password</label>
-                <input name="password" type="password">
+                <div class="div_input">
+                    <div class="div_label">
+                        <label for="user">User name</label>
+                        <p class="p_red" id="p_red_name" hidden>Entrez un nom</p>
+                    </div>
+                    <input name="user" type="text" id="user">
+                </div>
+
+                <div class="div_input">
+                    <div class="div_label">
+                        <label for="password">Password</label>
+                        <p class="p_red" id="p_red_mdp" hidden>Entrez un mot de passe</p>
+                    </div>
+                    <input name="password" type="password" id="password">
+                </div>
+
+                <div id="div_btn">
+                    <button id="btn">Confirmer</button>
+                </div>
             </div>
         </div>
     </div>
+
+    <template id="temp_new_page">
+        <div>
+            <p id="p_valide">Votre compte a été créé avec succes !</p>
+            <button><a href="/">Retourner au menu</a></button>
+            <!--FINIR STYLE DE LA PAGE DE VALIDATION-->
+        </div>
+    </template>
 
     
 </body>

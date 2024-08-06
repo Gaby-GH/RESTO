@@ -1,13 +1,3 @@
 [
-    {
-        "e-mail": "gab_ltn@icloud.com",
-        "code": "123soleil",
-        "admin": true
-    }, 
-
-    {
-        "e-mail": "boris.letrain@icloud.com",
-        "code": "goodmorning5",
-        "admin": false
-    }
+  
 ]

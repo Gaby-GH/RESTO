@@ -1,6 +1,7 @@
 import { createReadStream } from "node:fs"
 import {readFile, writeFile} from "node:fs/promises"
 import {createServer} from "node:http"
+import { SaveNewUser } from "./fonctions/account.js"
 
 createServer(async (req, res) => {
     let url = new URL(req.url, `http://${req.headers.host}`)
@@ -76,7 +77,21 @@ createServer(async (req, res) => {
             console.log("not found")
             res.writeHead(404)
         }
+    
+    }else if (req.method == "PUT"){
+        if (url.pathname == "/storage/compte.json"){
+            req.on("data", (chunk) => {
+                SaveNewUser(chunk.toString("utf8"))
+            })
+
+            res.writeHead(200)
+        
+        }else {
+            console.log("PUT", "not found")
+            res.writeHead(404)
+        }
     }
+
 
     
 

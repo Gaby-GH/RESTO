@@ -4,6 +4,18 @@ body{
     background-attachment: fixed;
 }
 
+p{
+    margin: 0%;
+    font-family: "Arsenal SC", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
 #nav_barre{
     position: fixed;
     top: 0%;
@@ -49,26 +61,26 @@ body{
     border-radius: 4px;
 }
 
-#div_create{
-    display: flex;
+#div_connexion{
+    background-color: rgba(36, 175, 110, .8);
+    border-radius: 4px;
     width: 30vw;
     height: 400px;
-    background-color: rgba(36, 175, 110, .8);
-    align-items: center;
+    display: flex;
     flex-direction: column;
-    border-radius: 4px;
+    align-items: center;
 }
 
-#p_title{
-    font-family: "Arsenal SC", sans-serif;
+#p_connexion{
     font-weight: 500;
-    font-style: normal;
     font-size: 38px;
+    margin-top: 38px;
+    margin-bottom: 38px;
 }
 
 .div_input{
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
 }
 
 .div_label{
@@ -76,22 +88,16 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 275px;
+}
+
+label{
+    font-size: 20px;
 }
 
 .p_red{
     color: red;
-    font-family: "Arsenal SC", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-weight: bold;
-    margin: 0%;
-}
-
-label{
-    font-family: "Arsenal SC", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 20px;
+    font-weight: 700;
 }
 
 input{
@@ -135,33 +141,26 @@ button{
 button:hover{
     background-color: rgba(218, 165, 32, 0.8);
     transform: scale(1.01);
+    cursor: pointer;
 }
 
-#div_return{
-    width: 80%;
-    height: 90%;
+#div_echec{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 75%;
+    height: 90%;
 }
 
-#p_valide{
-    font-family: "Arsenal SC", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 28px;
-    text-align: center;
-}
-
-#btn_return{
-    width: 180px;
+#div_echec > button{
+    width: auto;
+    margin-bottom: 18px;
     display: flex;
     justify-content: center;
 }
 
-button > a{
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
+#p_echec{
+    font-size: 28px;
+    margin-bottom: 28px;
 }

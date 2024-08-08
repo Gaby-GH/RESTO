@@ -81,7 +81,47 @@ body{
 }
 
 #div_1 > p{
-    width: 75%;
+    width: 80%;
+}
+
+#div_1 > div{
+    width: 80%;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+#div_1 > div > p{
+    font-family: "Arsenal SC", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+#p_slogan{
+    font-size: 28px;
+    font-family: "Arsenal SC", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0%;
+    width: 80%;
+}
+
+#btn_ouvrir_carte{
+    border: 2px solid goldenrod;
+    color: black;
+    font-family: "Arsenal SC", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    width: 45%;
+    height: 45px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: all 0.4s;
+}
+
+#btn_ouvrir_carte:hover{
+    cursor: pointer;
+    background-color: rgba(218, 165, 32, 0.5);
 }
 
 #div_2{
@@ -124,7 +164,7 @@ body{
     flex-direction: column;
 }
 
-#div_connexion > button{
+#div_connexion > a > button{
     margin-bottom: 16px;
     width: 180px;
     border-radius: 4px;
@@ -139,39 +179,13 @@ body{
     font-style: normal;
 }
 
-#div_connexion > button:hover{
+#div_connexion > a > button:hover{
     background-color: rgba(218, 165, 32, 0.5);
+    cursor: pointer;
 }
 
-#div_connexion > button > a{
+#div_connexion > a{
     text-decoration: none;
     color: black;
 }
 
-#p_slogan{
-    font-size: 28px;
-    font-family: "Arsenal SC", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    margin: 0%;
-    width: 80%;
-}
-
-#btn_ouvrir_carte{
-    border: 2px solid goldenrod;
-    color: black;
-    font-family: "Arsenal SC", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 16px;
-    width: 45%;
-    height: 45px;
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0);
-    transition: all 0.4s;
-}
-
-#btn_ouvrir_carte:hover{
-    cursor: pointer;
-    background-color: rgba(218, 165, 32, 0.5);
-}

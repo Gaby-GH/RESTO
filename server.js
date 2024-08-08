@@ -1,7 +1,7 @@
 import { createReadStream } from "node:fs"
 import {readFile, writeFile} from "node:fs/promises"
 import {createServer} from "node:http"
-import { SaveNewUser } from "./fonctions/account.js"
+import { SaveNewUser, UpdateDataUser } from "./fonctions/account.js"
 
 createServer(async (req, res) => {
     let url = new URL(req.url, `http://${req.headers.host}`)
@@ -76,6 +76,15 @@ createServer(async (req, res) => {
         }else if(url.pathname == "/connexion.html"){
             let file = await readFile("./app/connexion/connexion.html")
             res.write(file)
+        }else if(url.pathname == "/connexion.css"){
+            let file = await readFile("./app/connexion/connexion.css")
+            res.write(file)
+        }else if(url.pathname == "/connexion.js"){
+            let file = await readFile("./app/connexion/connexion.js")
+            res.write(file)
+        }else if(url.pathname == "/storage/compte.json"){
+            let file = await readFile("./storage/compte.json")
+            res.write(file)
 
         } else{
             console.log("not found")
@@ -86,6 +95,13 @@ createServer(async (req, res) => {
         if (url.pathname == "/storage/compte.json"){
             req.on("data", (chunk) => {
                 SaveNewUser(chunk.toString("utf8"))
+            })
+
+            res.writeHead(200)
+        
+        }else if (url.pathname == "/storage/user.json"){
+            req.on("data", (chunk) => {
+                UpdateDataUser(chunk.toString("utf8"))
             })
 
             res.writeHead(200)

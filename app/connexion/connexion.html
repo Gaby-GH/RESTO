@@ -3,9 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <link rel="stylesheet" href="connexion.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <script src="connexion.js" defer></script>
+
+    <title>Connexion</title>
 </head>
 <body>
+
+    <div id="nav_barre">
+        <svg style="margin-left: 60px;" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z"/></svg>
+        <a href="/" class="p_nav_barre" id="menu" style="margin-left: 4px; color: black;">Retour Menu</a>
+    </div>
+
+    <div id="div_main">
+        <div id="div_around">
+            <div id="div_connexion">
+                <p id="p_connexion">Connexion</p>
+
+                <div class="div_input">
+                    <div class="div_label">
+                        <label for="user"><p>User name</p></label>
+                        <p class="p_red" id="p_name" hidden>Entrez un nom</p>
+                    </div>
+                    <input type="text" name="user" id="name">
+                </div>
+
+                <div class="div_input">
+                    <div class="div_label">
+                        <label for="password"><p>Password</p></label>
+                        <p class="p_red" id="p_pw" hidden>Entrez un mot de passe</p>
+                    </div>
+                    <input type="password" name="password" id="password">
+                </div>
+
+                <div id="div_btn">
+                    <button id="btn">Confirmer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <template id="temp_retour_menu">
+
+    </template>
+
+
+    <template id="temp_ressayer">
+        <div id="div_echec">
+            <p id="p_echec">Echec de la connexion</p>
+
+            <button><a href="connexion.html">Ressayer</a></button>
+            <button><a href="/">Retourner au menu</a></button>
+        </div>
+    </template>
     
 </body>
 </html>

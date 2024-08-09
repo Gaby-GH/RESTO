@@ -1,5 +1,13 @@
 import { readFile, writeFile } from "node:fs/promises"
 
+export async function InitDataUser(){
+    let defaultData = {
+        "admin": false
+    }
+
+    await writeFile("storage/user.json", JSON.stringify(defaultData, null, 2))
+}
+
 export async function SaveNewUser(data_user) {
     let file = await readFile("storage/compte.json")
     let USERS = await JSON.parse(file)

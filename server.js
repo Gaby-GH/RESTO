@@ -1,7 +1,9 @@
 import { createReadStream } from "node:fs"
 import {readFile, writeFile} from "node:fs/promises"
 import {createServer} from "node:http"
-import { SaveNewUser, UpdateDataUser } from "./fonctions/account.js"
+import { InitDataUser, SaveNewUser, UpdateDataUser } from "./fonctions/account.js"
+
+InitDataUser() 
 
 createServer(async (req, res) => {
     let url = new URL(req.url, `http://${req.headers.host}`)
@@ -85,6 +87,19 @@ createServer(async (req, res) => {
         }else if(url.pathname == "/storage/compte.json"){
             let file = await readFile("./storage/compte.json")
             res.write(file)
+        }else if(url.pathname == "/storage/user.json"){
+            let file = await readFile("./storage/user.json")
+            res.write(file)
+
+        }else if(url.pathname == "/modifier.html"){
+            let file = await readFile("./app/modifier/modifier.html")
+            res.write(file)
+        }else if(url.pathname == "/modifier.css"){
+            let file = await readFile("./app/modifier/modifier.css")
+            res.write(file)
+        }else if(url.pathname == "/modifier.js"){
+            let file = await readFile("./app/modifier/modifier.js")
+            res.write(file)
 
         } else{
             console.log("not found")
@@ -112,9 +127,6 @@ createServer(async (req, res) => {
         }
     }
 
-
-    
-
-
     res.end()
+
 }).listen(3008)

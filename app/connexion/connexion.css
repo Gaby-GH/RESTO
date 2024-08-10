@@ -114,7 +114,7 @@ input{
 
 input:focus{
     outline: none;
-    background-color: rgba(218, 165, 32, 0.493);
+    background-color: rgba(218, 165, 32, 0.5);
 }
 
 #div_btn{

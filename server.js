@@ -2,6 +2,7 @@ import { createReadStream } from "node:fs"
 import {readFile, writeFile} from "node:fs/promises"
 import {createServer} from "node:http"
 import { InitDataUser, SaveNewUser, UpdateDataUser } from "./fonctions/account.js"
+import {DeleteRepas} from "./fonctions/menus.js"
 
 InitDataUser() 
 
@@ -124,6 +125,12 @@ createServer(async (req, res) => {
         }else {
             console.log("PUT", "not found")
             res.writeHead(404)
+        }
+    }else if (req.method == "DELETE"){
+        if (url.pathname == "/storage/menu.json"){
+            req.on("data", (chunk) => {
+                DeleteRepas(chunk)
+            })
         }
     }
 

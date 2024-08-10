@@ -38,26 +38,60 @@
                         <p>Ajouter</p>
 
                         <div class="div_input">
-                            <label for="input_name">Nom</label>
-                            <p>information necessaire</p>
+                            <div class="div_label">
+                                <label for="input_categorie">Categorie</label>
+                                <p class="p_red" hidden>information necessaire</p>
+                            </div>
+                            <select name="input_categorie" id="">
+                                <option value="Menu">Menu</option>
+                                <option value="Boissons">Boissons</option>
+                                <option value="Accompagnements">Accompagnements</option>
+                            </select>
+                        </div>
+
+                        <div class="div_input">
+                            <div class="div_label">
+                                <label for="input_name">Nom</label>
+                                <p class="p_red" hidden>information necessaire</p>
+                            </div>
                             <input name="input_name" type="text">
                         </div>
                         
                         <div class="div_input">
-                            <label for="input_description">Description</label>
-                            <p>information necessaire</p>
+                            <div class="div_label">
+                                <label for="input_description">Description</label>
+                                <p class="p_red" hidden>information necessaire</p>
+                            </div>
                             <input name="input_description" type="text">
                         </div>
                         
                         <div class="div_input">
-                            <label for="input_prix">Prix</label>
-                            <p>information necessaire</p>
-                            <input name="input_prix" type="text">
+                            <div id="label_prix" class="div_label">
+                                <label for="input_prix">Prix</label>
+                                <p class="p_red" hidden>Necessaire</p>
+                            </div>
+                            <div id="div_validation">
+                                <input name="input_prix" id="input_prix" type="text">
+
+                                <div>
+                                    <button id="btn_valider"><p style="font-weight: 700;">Ajouter</p></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div id="div_supprimer">
                         <p>Supprimer</p>
+                        <div id="div_valid_supp">
+                            <div>
+                                <div class="div_label">
+                                    <label for="delete_name">Nom</label>
+                                    <p class="p_red" id="p_red_delete" hidden>Necessaire</p>
+                                </div>
+                                <input id="delete_name" name="delete_name" type="text">
+                            </div>
+                            <button id="btn_delete" style="height: 28px;"><p style="font-weight: 700;">Supprimer</p></button>
+                        </div>
                     </div>
                 </div>
 

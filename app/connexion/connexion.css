@@ -164,3 +164,25 @@ button:hover{
     font-size: 28px;
     margin-bottom: 28px;
 }
+
+#div_connected{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    height: 90%;
+}
+
+#div_connected > button{
+    width: auto;
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+#p_connected{
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 28px;
+}

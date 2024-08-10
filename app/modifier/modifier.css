@@ -5,6 +5,13 @@ body{
     background-attachment: fixed;
 }
 
+p{
+    margin: 0%;
+    font-family: "Arsenal SC", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
 #nav_barre{
     position: fixed;
     top: 0%;
@@ -59,4 +66,46 @@ body{
     width: 60vw;
     height: 400px;
     border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.div_modif{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.p_div_modif{
+    font-size: 20px;
+}
+
+#modif_menu{
+    width: 50%;
+    height: 90%;
+    border-right: 2px solid goldenrod;
+}
+
+#m_ajouter{
+    border-bottom: 2px solid goldenrod;
+    width: 80%;
+    margin: 10px 0px;
+}
+
+#m_ajouter > p{
+    margin-bottom: 10px; 
+}
+
+.div_input{
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.div_label
+
+#modif_horaires{
+    width: 50%;
+    height: 90%;
 }

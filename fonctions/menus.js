@@ -1,5 +1,35 @@
 import {readFile, writeFile} from "node:fs/promises"
 
+export async function AppendRepasMenu(repas){
+    let file = await readFile("storage/menu.json")
+    let menu = await JSON.parse(file)
+    repas = JSON.parse(repas)
+
+    menu.push(repas)
+
+    await writeFile("storage/menu.json", JSON.stringify(menu, null, 2))
+}
+
+export async function AppendRepasMenuBoissons(boisson){
+    let file = await readFile("storage/menu_boissons.json")
+    let menu_boissons = await JSON.parse(file)
+    boisson = JSON.parse(boisson)
+
+    menu_boissons.push(boisson)
+
+    await writeFile("storage/menu_boissons.json", JSON.stringify(menu_boissons, null, 2))
+}
+
+export async function AppendRepasMenuAccompagnements(repas){
+    let file = await readFile("storage/menu_accompagnements.json")
+    let menu_accompagnements = await JSON.parse(file)
+    repas = JSON.parse(repas)
+
+    menu_accompagnements.push(repas)
+
+    await writeFile("storage/menu_accompagnements.json", JSON.stringify(menu_accompagnements, null, 2))
+}
+
 export async function DeleteRepas(name){
         
     let file_1 = await readFile("storage/menu.json")

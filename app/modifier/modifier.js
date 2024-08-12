@@ -1,3 +1,4 @@
+// Menu
 // Append
 
 let select = document.querySelector("#select_cate")
@@ -31,7 +32,7 @@ async function AppendRepas(){
 
             let data = {
                 name: input_name.value,
-                description : input_description.value, 
+                ingredients : input_description.value, 
                 prix: input_prix.value
             }
 
@@ -40,20 +41,55 @@ async function AppendRepas(){
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify(data) // continuer la 
+                body: JSON.stringify(data) 
+            }).then(() => {
+                input_name.value = ""
+                input_description.value = ""
+                input_prix.value = ""
             })
 
         }else if (select.value == "boissons"){
 
+            let data = {
+                name: input_name.value,
+                prix: input_prix.value
+            }
+
+            await fetch("/storage/menu_boissons.json", {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            }).then(() => {
+                input_name.value = ""
+                input_description.value = ""
+                input_prix.value = ""
+            })
+
         }else if (select.value == "accompagnements"){
+            let data = {
+                name: input_name.value,
+                prix: input_prix.value
+            }
+
+            await fetch("/storage/menu_accompagnements.json", {
+                method: "PUT",
+                headers: {
+                    "Conent-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            }).then(() => {
+                input_name.value = ""
+                input_description.value = ""
+                input_prix.value = ""
+            })
 
         }
     }
 }
 
 btn_append.addEventListener("click", AppendRepas)
-
-
 
 // delete
 
@@ -79,5 +115,7 @@ async function DeleteRepas(){
 
 btn_delete.addEventListener("click", DeleteRepas)
 
+
+// Horaires
 
 

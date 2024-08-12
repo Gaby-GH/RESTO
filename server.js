@@ -2,7 +2,7 @@ import { createReadStream } from "node:fs"
 import {readFile, writeFile} from "node:fs/promises"
 import {createServer} from "node:http"
 import { InitDataUser, SaveNewUser, UpdateDataUser } from "./fonctions/account.js"
-import {DeleteRepas} from "./fonctions/menus.js"
+import {AppendRepasMenu, AppendRepasMenuAccompagnements, AppendRepasMenuBoissons, DeleteRepas} from "./fonctions/menus.js"
 
 InitDataUser() 
 
@@ -124,21 +124,21 @@ createServer(async (req, res) => {
         
         }else if (url.pathname == "/storage/menu.json"){
             req.on("data", (chunk) => {
-                // import fonction qui ajoute repas a menu.json
+                AppendRepasMenu(chunk.toString("utf8"))
             })
 
             res.writeHead(200)
         
         }else if (url.pathname == "/storage/menu_boissons.json"){
             req.on("data", (chunk) => {
-                // import fonction qui ajoute repas a menu_boissons.json
+                AppendRepasMenuBoissons(chunk.toString("utf8"))
             })
 
             res.writeHead(200)
         
         }else if (url.pathname == "/storage/menu_accompagnements.json"){
             req.on("data", (chunk) => {
-                // import fonction qui ajoute repas a menu_accompagnements.json
+                AppendRepasMenuAccompagnements(chunk.toString("utf8"))
             })
 
             res.writeHead(200)

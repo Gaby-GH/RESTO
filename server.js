@@ -122,6 +122,27 @@ createServer(async (req, res) => {
 
             res.writeHead(200)
         
+        }else if (url.pathname == "/storage/menu.json"){
+            req.on("data", (chunk) => {
+                // import fonction qui ajoute repas a menu.json
+            })
+
+            res.writeHead(200)
+        
+        }else if (url.pathname == "/storage/menu_boissons.json"){
+            req.on("data", (chunk) => {
+                // import fonction qui ajoute repas a menu_boissons.json
+            })
+
+            res.writeHead(200)
+        
+        }else if (url.pathname == "/storage/menu_accompagnements.json"){
+            req.on("data", (chunk) => {
+                // import fonction qui ajoute repas a menu_accompagnements.json
+            })
+
+            res.writeHead(200)
+        
         }else {
             console.log("PUT", "not found")
             res.writeHead(404)

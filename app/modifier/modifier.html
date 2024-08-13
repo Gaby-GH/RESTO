@@ -97,24 +97,42 @@
 
                 <div class="div_modif" id="modif_horaires">
                     <p class="p_div_modif">Modifier les horaires</p>
-                    <select name="" id="select_day">
-                        <option value="mardi"><p>mardi</p></option>
-                        <option value="mercredi"><p>mercredi</p></option>
-                        <option value="jeudi"><p>jeudi</p></option>
-                        <option value="vendredi"><p>vendredi</p></option>
-                        <option value="samedi"><p>samedi</p></option>
-                    </select>
+                    <div id="div_change_horaires">
+                        <div class="div_div">
+                            <div class="div_input_horaires select_large">
+                                <label for="select_day">Jour</label>
+                                <select name="select_day" id="select_day">
+                                    <option value="0"><p>mardi</p></option>
+                                    <option value="1"><p>mercredi</p></option>
+                                    <option value="2"><p>jeudi</p></option>
+                                    <option value="3"><p>vendredi</p></option>
+                                    <option value="4"><p>samedi</p></option>
+                                </select>
+                            </div>
+    
+                            <div class="div_input_horaires select_large">
+                                <label for="select_part">Service</label>
+                                <select name="select_part" id="select_part">
+                                    <option value="midi"><p>midi</p></option>
+                                    <option value="soir"><p>soir</p></option>
+                                </select>
+                            </div>
+                        </div>
 
-                    <select name="" id="select_part">
-                        <option value="matin"><p>matin</p></option>
-                        <option value="soir"><p>soir</p></option>
-                    </select>
+                        <div class="div_div">
+                            <div class="div_input_horaires select_large">
+                                <label for="Ouverture">Ouverture</label>
+                                <input type="time" name="Ouverture" id="input_ouverture">
+                            </div>
+                            
+                            <div class="div_input_horaires select_large">
+                                <label for="Fermeture">Fermeture</label>
+                                <input type="time" name="Fermeture" id="input_fermeture">
+                            </div>
+                        </div>
 
-                    <label for="Ouverture">Ouverture</label>
-                    <input type="text" name="Ouverture">
-                    
-                    <label for="Fermeture">Fermeture</label>
-                    <input type="text" name="Fermeture">
+                        <button id="btn_modifier" style="height: 28px; margin-top: 50px; width: 130px;"><p style="font-weight: 700;">Modifier</p></button>
+                    </div>
                 </div>
             </div>
         </div>

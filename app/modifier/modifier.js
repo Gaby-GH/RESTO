@@ -118,4 +118,34 @@ btn_delete.addEventListener("click", DeleteRepas)
 
 // Horaires
 
+let input_day = document.querySelector("#select_day")
+let input_service = document.querySelector("#select_part")
+let input_ouverture = document.querySelector("#input_ouverture")
+let input_fermeture = document.querySelector("#input_fermeture")
+
+let btn_modif = document.querySelector("#btn_modifier")
+
+async function ModifHoraires(){
+
+    if (input_ouverture.value != "" && input_fermeture.value != ""){
+        let data = {
+            index: input_day.value,
+            service: input_service.value,
+            ouverture: `${input_ouverture.value[0]}${input_ouverture.value[1]}`,
+            fermeture: `${input_fermeture.value[0]}${input_fermeture.value[1]}`
+        }
+
+        await fetch("storage/horaires.json", {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"  // reprendre here
+            },
+            body: JSON.stringify(data)
+        })
+    }
+
+}
+
+btn_modif.addEventListener("click", ModifHoraires)
+
 

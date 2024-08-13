@@ -206,3 +206,33 @@ button:hover{
     width: 50%;
     height: 90%;
 }
+
+#div_change_horaires{
+    width: 75%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.div_input_horaires{
+    display: flex;
+    flex-direction: column;
+}
+
+.div_div{
+    margin-top: 40px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.select_large > select{
+    width: 100px;
+}
+
+.select_large > input{
+    width: 100px;
+}

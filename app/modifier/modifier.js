@@ -138,7 +138,7 @@ async function ModifHoraires(){
         await fetch("storage/horaires.json", {
             method: "PUT",
             headers: {
-                "Content-Type": "application/json"  // reprendre here
+                "Content-Type": "application/json"
             },
             body: JSON.stringify(data)
         })

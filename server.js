@@ -3,6 +3,7 @@ import {readFile, writeFile} from "node:fs/promises"
 import {createServer} from "node:http"
 import { InitDataUser, SaveNewUser, UpdateDataUser } from "./fonctions/account.js"
 import {AppendRepasMenu, AppendRepasMenuAccompagnements, AppendRepasMenuBoissons, DeleteRepas} from "./fonctions/menus.js"
+import { ChangeHoraires } from "./fonctions/horaires.js"
 
 InitDataUser() 
 
@@ -103,7 +104,7 @@ createServer(async (req, res) => {
             res.write(file)
 
         } else{
-            console.log("not found")
+            console.log("not found", url.pathname)
             res.writeHead(404)
         }
     
@@ -143,10 +144,18 @@ createServer(async (req, res) => {
 
             res.writeHead(200)
         
+        }else if(url.pathname == "/storage/horaires.json"){
+            req.on("data", (chunk) => {
+                ChangeHoraires(chunk.toString("utf8"))
+            })
+
+            res.writeHead(200)
+
         }else {
-            console.log("PUT", "not found")
+            console.log("PUT", "not found", url.pathname)
             res.writeHead(404)
         }
+
     }else if (req.method == "DELETE"){
         if (url.pathname == "/storage/menu.json"){
             req.on("data", (chunk) => {
